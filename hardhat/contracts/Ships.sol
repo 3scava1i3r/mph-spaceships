@@ -34,10 +34,9 @@ contract Ships is DInterest {
 
     }
 
-
      
     function safeTransferEngine() public{}
     function createShell() public {}
-     
+    
 
 }

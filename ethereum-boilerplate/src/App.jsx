@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-vars */
 import { useEffect } from "react";
 import { useMoralis } from "react-moralis";
 import {
@@ -10,19 +12,19 @@ import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import TokenPrice from "components/TokenPrice";
 import ERC20Balance from "components/ERC20Balance";
-import ERC20Transfers from "components/ERC20Transfers";
 import DEX from "components/DEX";
-import NFTBalance from "components/NFTBalance";
 import Wallet from "components/Wallet";
 import { Layout, Tabs } from "antd";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
-import QuickStart from "components/QuickStart";
 import Contract from "components/Contract/Contract";
 import Text from "antd/lib/typography/Text";
-import Ramper from "components/Ramper";
 import MenuItems from "./components/MenuItems";
+import Gennft from "components/Gennft";
+import GenEngine from "components/GenEngine";
+import Shell from "components/Shell";
+import Shipbalance from "components/Shipbalance";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -33,6 +35,7 @@ const styles = {
     color: "#041836",
     marginTop: "130px",
     padding: "10px",
+    
   },
   header: {
     position: "fixed",
@@ -74,12 +77,6 @@ const App = ({ isServerInfo }) => {
           <MenuItems />
           <div style={styles.headerRight}>
             <Chains />
-            <TokenPrice
-              address="0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
-              chain="eth"
-              image="https://cloudflare-ipfs.com/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg/"
-              size="40px"
-            />
             <NativeBalance />
             <Account />
           </div>
@@ -88,7 +85,7 @@ const App = ({ isServerInfo }) => {
         <div style={styles.content}>
           <Switch>
             <Route exact path="/quickstart">
-              <QuickStart isServerInfo={isServerInfo} />
+              <div>Hi boiiii</div>
             </Route>
             <Route path="/wallet">
               <Wallet />
@@ -109,14 +106,17 @@ const App = ({ isServerInfo }) => {
             <Route path="/erc20balance">
               <ERC20Balance />
             </Route>
-            <Route path="/onramp">
-              <Ramper />
+            <Route path="/gen">
+              <Gennft />
             </Route>
-            <Route path="/erc20transfers">
-              <ERC20Transfers />
+            <Route path="/engine">
+              <GenEngine />
             </Route>
-            <Route path="/nftBalance">
-              <NFTBalance />
+            <Route path="/shell">
+              <Shell />
+            </Route>
+            <Route path="/balance">
+              <Shipbalance />
             </Route>
             <Route path="/contract">
               <Contract />
@@ -133,7 +133,7 @@ const App = ({ isServerInfo }) => {
           </Switch>
         </div>
       </Router>
-      <Footer style={{ textAlign: "center" }}>
+      {/* <Footer style={{ textAlign: "center" }}>
         <Text style={{ display: "block" }}>
           ⭐️ Please star this{" "}
           <a
@@ -167,7 +167,7 @@ const App = ({ isServerInfo }) => {
             Moralis
           </a>
         </Text>
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 };
