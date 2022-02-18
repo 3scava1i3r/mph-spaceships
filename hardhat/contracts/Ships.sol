@@ -4,6 +4,7 @@ pragma solidity >= 0.7.0 <= 0.8.4;
 import "hardhat/console.sol";
 import "./88mph/DInterest.sol";
 
+
 contract Ships is DInterest {
 
     struct Engine {
@@ -17,6 +18,8 @@ contract Ships is DInterest {
     mapping (uint256 => Engine) public EngineList; //here uint256 is the depositID
 
     event Minted(uint8 _marketType,string uri,address owner);
+
+    
     function mintEngine(uint8 _marketType,address poolAddress ,uint256 depositAmount, uint64 expireTimestamp, uint256 depositPeriodInSeconds, string calldata _uri) public returns(uint256 nftID,uint256 interestAmount) {
         
         // will add require statements later
@@ -36,7 +39,7 @@ contract Ships is DInterest {
 
      
     function safeTransferEngine() public{}
-    function createShell() public {}
+    
     
 
 }

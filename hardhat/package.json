@@ -9,8 +9,9 @@
     "hardhat": "^2.8.3"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.2",
-    "@openzeppelin/contracts-upgradeable": "^4.4.2",
+    "@opengsn/contracts": "^2.2.6",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.1",
     "base64-sol": "^1.1.0",
     "prb-math": "^2.4.3"
   }
