@@ -1,4 +1,4 @@
-../open// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 
 // IonTimelock.sol -- Part of the Charged Particles Protocol
 // Copyright (c) 2021 Firma Lux, Inc. <https://charged.fi>
